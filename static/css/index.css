@@ -1,0 +1,50 @@
+body{
+    background-color: black;
+    color: white;
+}
+.card{
+    background-color: black;
+    color:white;
+    border: solid 2px white;
+    border-radius: 6px;
+    height: auto;
+}
+.card img{
+    object-fit: cover;
+    height: 60vh;
+}
+.image{
+    margin-top: 2vh;
+}
+.trailer{
+    padding-top: 14vh;
+}
+.trailer h2{
+    text-align: center;
+    margin-bottom: 2vh;
+}
+.content{
+    text-align: center;
+    margin: 3vh 1vw;
+}
+.homovies{
+    margin-top: 5vh;
+    height: 69vh;
+    text-align: center;
+}
+.homovies h5{
+    padding: 1vh;
+}
+.carousel-item img{
+    object-fit: cover;
+    height: 85vh;
+    
+}
+.caption{
+    position: relative;
+    margin: 12vh 0vw;
+    
+}
+.cat{
+    margin-top: 5vh;
+}

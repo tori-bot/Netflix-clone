@@ -1,0 +1,36 @@
+{%  extends 'base.html' %}
+
+{% block content %}
+{{super block}}
+<div class="container">
+    <div class="row">
+    {% if movies %}
+    <h2>Found {{ movies|length }} titles for your search.</h2>
+    {% else %}
+    <h2> Found 0 titles for your search.</h2>
+    {% endif %}
+</div>
+{% if movies %}
+<div class="row cat">
+    {% for item in movies %}
+    <div class="col-md-3 movie-item">
+        <div class="card homovies">
+            <div class="card-img-top">
+            <a href="details/{{item.id}}">
+          <img
+        src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{item.poster_path}} "
+        alt="poster"
+      />
+         </a>    
+            </div>
+         <h5>{{item.original_title}}</h5>   
+        </div>
+      
+    </div>
+    {% endfor %}
+</div>
+</div>
+
+
+
+{% endblock %}

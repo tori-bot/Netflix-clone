@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    <div class="row movie">
+        <div class="col-md-6 one">
+            <div class="card">
+            <img
+        src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{movie.poster_path}} "
+        alt="poster"
+      />
+      <div class="content">
+        <h2>{{movie.original_title}} </h2>
+        <p><small>Rating ~ {{movie.vote_average}} </small></p>
+        <br>
+        <p>{{movie.overview}} </p>
+
+        <button>Save to Playlist</button> 
+        
+        
+      </div>
+      
+      
+      
+
+        </div>
+        </div>
+        <div class="col-md-6 trailer">
+            <h2>Trailer</h2>
+            <hr>
+            <iframe width="560" height="315" src="{{trailer_url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

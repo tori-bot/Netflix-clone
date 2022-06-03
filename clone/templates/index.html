@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+ {% block content %}
+  {{block.super}}
+
+
+
+
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+<div class="carousel-inner" role="listbox">
+    {% for item in movies %}
+            <div class="carousel-item {% if forloop.first %} active {% endif %}">
+                <div class="row">
+                 <div class="col-md-1"></div>
+                <div class="col-md-5">
+                 <a href="details/{{item.id}}">
+                 <img
+        src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{item.poster_path}} "
+        alt="poster"
+      />   
+                </a>   
+                </div>
+                
+                <div class="col-md-5 caption text-center">
+                    <h1>{{item.title}}</h1>
+                    <p>{{item.overview}}</p>
+                </div> 
+                <div class="col-md-1"></div>  
+                </div>
+                
+            </div>
+    {% endfor %}    
+</div></div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+<div class="container">
+  <div class="row cat">
+    <h2>Popular Movies</h2>
+    {% for item in movies %}
+    <div class="col-md-3 movie-item">
+        <div class="card homovies">
+            <div class="card-img-top">
+            <a href="details/{{item.id}}">
+          <img
+        src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{item.poster_path}} "
+        alt="poster"
+      />
+         </a>    
+            </div>
+         <h5>{{item.original_title}}</h5>   
+        </div>
+      
+      
+      
+    </div>
+
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
