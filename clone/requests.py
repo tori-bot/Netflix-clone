@@ -1,4 +1,4 @@
-import requests
+ import requests
 from decouple import config
 
 def get_all_movies(category):
